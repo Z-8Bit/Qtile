@@ -1,0 +1,57 @@
+colors:
+  primary:
+    background: '#1c1c1c'
+    #'#312d38'
+    foreground: '#eff0eb'
+  cursor:
+    text: CellBackground
+    cursor: '#ff6ac1'
+  selection:
+    text:  '#FF55FF'
+    background: '#0d0c0e'
+
+  normal:
+    black:   '#282a36'
+    red:     '#ff5c57'
+    green:   '#5af78e'
+    yellow:  '#f3f99d'
+    blue:    '#57c7ff'
+    magenta: '#ff6ac1'
+    cyan:    '#9aedfe'
+    white:   '#f1f1f0'
+
+  bright:
+    black:   '#686868'
+    red:     '#ff2121'
+    green:   '#5af78e'
+    yellow:  '#f3f99d'
+    blue:    '#6a9aff'
+    magenta: '#FF55FF'
+    cyan:    '#9aedfe'
+    white:   '#eff0eb'
+
+background_opacity: 0.9
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+  bold:
+    family: JetBrainsMono Nerd Font
+  size: 8
+
+window:
+  padding:
+    x: 8
+    y: 8
+
+cursor:
+  unfocused_hollow: true 
+  
+env:
+  TERM: xterm-256color
+
+scrolling:
+  history: 4000
+  auto_scroll: true 
+
+draw_bold_text_with_bright_colors: true
