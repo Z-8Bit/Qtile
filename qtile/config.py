@@ -93,8 +93,10 @@ keys = [
 
 ############## SCREENSHOTS ###################
     
-    Key(["shift"], "Print", lazy.spawn("maim | xclip -selection clipboard -t image/png")),
-    Key([mod], "Print", lazy.spawn("maim --select | xclip -selection clipboard -t image/png")),
+   # Key(["shift"], "Print", lazy.spawn("maim | xclip -selection clipboard -t image/png")),
+   # Key([mod], "Print", lazy.spawn("maim --select | xclip -selection clipboard -t image/png")),
+   Key([], "Print", lazy.spawn("clip.sh")),
+   Key(["shift"], "Print", lazy.spawn("shot.sh")),
 
 ############## APPLICATIONS ###################
     
@@ -153,8 +155,9 @@ for i in groups:
 layouts = [
     layout.Tile     (margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a", ratio=0.55, shift_windows=True),
     layout.MonadWide(margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a"),
-    layout.Bsp      (margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a", fair=False),
-    layout.Max(),
+    layout.MonadTall(margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a"),
+    layout.Bsp      (margin=7, border_width=2, border_focus="#009dff", border_normal="#4c566a", fair=False),
+    layout.Max(margin=0, border_width=0),
 ]
 
 colors =  [
@@ -195,7 +198,7 @@ screens = [
                 ),
                 widget.GroupBox(
                     font = "comic sans ms",
-                    #font = "hack",
+                    #font = "trechubet ms",
                     fontsize = 11,
                     margin_y = 4,
                     margin_x = 2,
@@ -216,7 +219,7 @@ screens = [
                 ),
                 widget.Spacer(
                         background = colors[9],
-                        length = 400,
+                        length = 420,
                 ),
                 widget.Clock(
                     font = "comic sans ms",
@@ -366,7 +369,7 @@ screens = [
                     background=colors[7],
                     fontsize=15,
                     low_percentage=0.2,
-                    low_foreground=colors[5],
+                    low_foreground=colors[8],
                     font="comic sans ms",
                     update_interval=1,
                     format='Battery {percent:2.0%}',
@@ -380,7 +383,7 @@ screens = [
             31,
             background=colors[9],
             #margin=[12,20,4,20],
-            margin=[8,20,0,20],
+            margin=[8,8,2,8],
             opacity= 1.0,
             ),
     ),
