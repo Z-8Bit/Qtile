@@ -5,7 +5,13 @@ title = Dunst
 class = Dunst
 monitor = 0
 follow = mouse
-geometry = "350x6-30+60"
+#geometry = "350x6-24+60"
+
+width = 350
+#height = (0,200)
+origin = top-right
+offset = 18x59
+
 indicate_hidden = yes
 shrink = yes
 
@@ -14,7 +20,7 @@ separator_height = 2
 padding = 8
 horizontal_padding = 11
 frame_width = 2
-frame_color = "#009dff"
+frame_color = "#007dcc"
 separator_color = "#2a303b"
 
 font = mplus nerd font 10
