@@ -170,7 +170,7 @@ colors =  [
         ["#de5af7", "#de5af7"], # purple / color 6
         ["#5af7a4", "#5af7a4"], # green / color 7
         ["#fb5c56", "#fb5c56"], # red / color 8
-        ["#252a34", "#252a34"]] # black / color 9
+        ["#1a1e25", "#1a1e25"]] # black / color 9
         
 
 widget_defaults = dict(
