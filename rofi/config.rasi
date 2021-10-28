@@ -5,6 +5,7 @@ configuration {
 	font:							"JetBrainsMono Nerd Font 13";
     show-icons:                     true;
     display-drun: 					"";
+/*    display-drun: 					" or ";*/
     drun-display-format:            "{icon} {name}";
 	sidebar-mode: 					true;
 }
