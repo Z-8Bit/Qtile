@@ -1,12 +1,12 @@
-
+Z's Rofi config, enjoy!
 
 /* colors */
 
 * {
   al:  #00000000;
-  bg:  #1e2626;
+  bg:  #1a1e25;
   se:  #59C2FF;
-  fg:  #B3B1AD;
-  ac:  #59C2FF;
+  fg:  #cbcbcb;
+  ac:  #007dcc;
   st:  #C2D94C;
 }
