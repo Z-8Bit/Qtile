@@ -1,6 +1,6 @@
 #nitrogen --restore
 /usr/bin/dunst &
 picom &
-/usr/bin/nitrogen --set-zoom-fill --random Pictures/Walls --save
+/usr/bin/nitrogen --set-zoom-fill --random Pictures/Wallpapers --save
 nm-applet &
 blueman-applet &
