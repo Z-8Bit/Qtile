@@ -1,4 +1,4 @@
 #!/bin/bash
 
 maim | xclip -selection clipboard -t image/png
-notify-send "Title" "Taken"
+notify-send "Screenshot Taken"
