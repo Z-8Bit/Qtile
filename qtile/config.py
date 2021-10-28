@@ -6,7 +6,7 @@ import subprocess
 from libqtile.command import lazy
 from libqtile import qtile
 from libqtile import layout, bar, widget, hook
-from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
+from libqtile.config import Click, Drag, DropDown, Group, KeyChord, Key, Match, Screen, ScratchPad
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -26,7 +26,7 @@ def window_to_next_group(qtile):
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i + 1].name)
 
-################# SHORTCUTS #################
+################# USER SHORTCUTS #################
 
 keys = [
     Key([mod], "r", lazy.spawn("rofi -show drun")),
@@ -39,10 +39,33 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("backlight_control -5")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("backlight_control +5")),
 
+    Key([mod], "Return", lazy.spawn("alacritty")),
+    Key([mod1], "p", lazy.spawn("pavucontrol")),
+    Key([mod1], "n", lazy.spawn("thunar")),
+    Key([mod1], "v", lazy.spawn("vscodium")),
+    Key([mod1], "d", lazy.spawn("discord")),
+    Key([mod1], "s", lazy.spawn("spotify")),
+    Key([mod1], "q", lazy.spawn("qbittorrent")),
+    Key([mod1], "m", lazy.spawn("multimc")),
+    Key([mod1], "l", lazy.spawn("lollypop")),
+    Key([mod1], "t", lazy.spawn("teams-for-linux")),
+    Key([mod1], "f", lazy.spawn("firefox-developer-edition")),
+    
+    Key([mod, mod1], "q", lazy.spawn("shutdown.sh")),
+    Key([mod, mod1], "r", lazy.spawn("reboot.sh")),
+
+############## SCREENSHOTS ###################
+    
+   # Key(["shift"], "Print", lazy.spawn("maim | xclip -selection clipboard -t image/png")),
+   # Key([mod], "Print", lazy.spawn("maim --select | xclip -selection clipboard -t image/png")),
+   Key([], "Print", lazy.spawn("clip.sh")),
+   Key(["shift"], "Print", lazy.spawn("shot.sh")),
+
+
 ################# SWITCH LAYOUT ###################
 
 # TOGGLE FLOATING LAYOUT
-    Key([mod, "control"], "a", lazy.window.toggle_floating()),
+    Key([mod], "t", lazy.window.toggle_floating()),
 
 # CHANGE FOCUS
     Key([mod], "Up", lazy.layout.up()),
@@ -63,7 +86,7 @@ keys = [
     Key([mod, "shift"], "Right", lazy.layout.swap_right()),
     Key([mod], "s", lazy.layout.next()),
 
-################# BSPWM ###################
+# BSPWM 
 
     Key([mod], "Down", lazy.layout.down()),
     Key([mod], "Up", lazy.layout.up()),
@@ -89,33 +112,14 @@ keys = [
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod], "q", lazy.window.kill()),
     Key([mod, "shift"], "q", lazy.shutdown()),
-    Key([mod], "c", lazy.restart()),
-
-############## SCREENSHOTS ###################
-    
-   # Key(["shift"], "Print", lazy.spawn("maim | xclip -selection clipboard -t image/png")),
-   # Key([mod], "Print", lazy.spawn("maim --select | xclip -selection clipboard -t image/png")),
-   Key([], "Print", lazy.spawn("clip.sh")),
-   Key(["shift"], "Print", lazy.spawn("shot.sh")),
-
-############## APPLICATIONS ###################
-    
-    Key([mod], "Return", lazy.spawn("alacritty")),
-    Key([mod1], "p", lazy.spawn("pavucontrol")),
-    Key([mod1], "n", lazy.spawn("thunar")),
-    Key([mod1], "v", lazy.spawn("vscodium")),
-    Key([mod1], "d", lazy.spawn("discord")),
-    Key([mod1], "s", lazy.spawn("spotify")),
-    Key([mod1], "q", lazy.spawn("qbittorrent")),
-    Key([mod1], "m", lazy.spawn("multimc")),
-    Key([mod1], "l", lazy.spawn("lollypop")),
-    Key([mod1], "f", lazy.spawn("firefox-developer-edition")),
+    Key([mod], "c", lazy.restart()),   
 
 ]
 
 groups= [
+
     Group("1",
-          label="WWW",
+          label="WEB",
           ),
 
     Group("2",
@@ -123,11 +127,11 @@ groups= [
           ),
 
     Group("3",
-          label="MP4",
+          label="DEV",
           ),
 
     Group("4",
-          label="TXT",
+          label="FUN",
           ),
 
     Group("5",
@@ -153,28 +157,28 @@ for i in groups:
 # LAYOUTS
 
 layouts = [
-    layout.Tile     (margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a", ratio=0.55, shift_windows=True),
-    layout.MonadWide(margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a"),
-    layout.MonadTall(margin=4, border_width=2, border_focus="#009dff", border_normal="#4c566a"),
-    layout.Bsp      (margin=7, border_width=2, border_focus="#009dff", border_normal="#4c566a", fair=False),
+    layout.MonadTall(margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b"),
+    layout.MonadWide(margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b"),
+    layout.Bsp (margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b", fair=False),
+    layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
 ]
 
 colors =  [
-        ["#ffffff", "#ffffff"], # white / color 0
+        ["#FFFFFF", "#FFFFFF"], # white / color 0
         ["#FF55FF", "#FF55FF"], # pink / color 1
-        ["#393956", "#393956"], # dark gray / color 2
+        ["#424267", "#424267"], # dark gray / color 2
         ["#b2b2b2", "#b2b2b2"], # gray / color 3
         ["#2ed3f5", "#2ed3f5"], # cyan / color 4
-        ["#6d78ff", "#6d78ff"], # blue / color 5
+        ["#6b7efa", "#6b7efa"], # blue / color 5
         ["#de5af7", "#de5af7"], # purple / color 6
-        ["#5af7a4", "#5af7a4"], # green / color 7
-        ["#fb5c56", "#fb5c56"], # red / color 8
+        ["#5268f9", "#5268f9"], # green / color 7
+        ["#8494fb", "#8494fb"], # red / color 8
         ["#1a1e25", "#1a1e25"]] # black / color 9
         
 
 widget_defaults = dict(
-    font='andale mono',
+    font='comic sans ms',
     fontsize=12,
     padding=3,
 )
@@ -219,7 +223,7 @@ screens = [
                 ),
                 widget.Spacer(
                         background = colors[9],
-                        length = 420,
+                        length = 370,
                 ),
                 widget.Clock(
                     font = "comic sans ms",
