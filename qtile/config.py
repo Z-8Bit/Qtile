@@ -1,3 +1,5 @@
+# Z's Qtile config, enjoy!
+
 from typing import List  # noqa: F401
 import os
 import re
