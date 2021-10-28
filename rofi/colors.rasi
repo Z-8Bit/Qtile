@@ -1,6 +1,6 @@
-Z's Rofi config, enjoy!
+/* Z's Rofi config, enjoy!
 
-/* colors */
+colors */
 
 * {
   al:  #00000000;
