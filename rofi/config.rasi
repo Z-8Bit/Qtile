@@ -1,3 +1,5 @@
+/* Z's Rofi config, enjoy! */
+
 configuration {
     modi:                           "drun";
 	font:							"JetBrainsMono Nerd Font 13";
@@ -12,13 +14,13 @@ configuration {
 window {
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px;
+	border:							2px;
 	border-color:					@ac;
     border-radius:                  0px;
 	width:							450;
     location:                       northwest;
-    x-offset:                       15;
-    y-offset:                       55;
+    x-offset:                       18;
+    y-offset:                       60;
 }
 
 prompt {
