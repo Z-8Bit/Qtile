@@ -39,9 +39,10 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("backlight_control -5")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("backlight_control +5")),
 
-    Key([mod], "Return", lazy.spawn("alacritty")),
+    Key([mod], "Return", lazy.spawn("xterm")),
     Key([mod1], "p", lazy.spawn("pavucontrol")),
     Key([mod1], "n", lazy.spawn("thunar")),
+    Key([mod1], "a", lazy.spawn("alacritty")),
     Key([mod1], "v", lazy.spawn("vscodium")),
     Key([mod1], "d", lazy.spawn("discord")),
     Key([mod1], "s", lazy.spawn("spotify")),
@@ -164,14 +165,15 @@ layouts = [
     layout.Max(margin=0, border_width=0),
 ]
 
+
 colors =  [
         ["#FFFFFF", "#FFFFFF"], # white / color 0
         ["#7bf52e", "#99f75e"], # pink / color 1
         ["#384657", "#384657"], # dark gray / color 2
         ["#b2b2b2", "#b2b2b2"], # gray / color 3
-        ["#2ed3f5", "#5eddf7"], # cyan / color 4
+        ["#0aaccf", "#0aaccf"], # cyan / color 4
         ["#6bb7fa", "#6bb7fa"], # blue / color 5
-        ["#de5af7", "#e88af9"], # purple / color 6
+        ["#bf0be2", "#d42bf5"], # purple / color 6
         ["#5268f9", "#5268f9"], # green / color 7
         ["#8494fb", "#8494fb"], # red / color 8
         ["#1a1e25", "#1a1e25"]] # black / color 9
@@ -413,6 +415,7 @@ screens = [
         ),
     ),
 ]
+
 
 ################# Drag floating layouts #################
 mouse = [
