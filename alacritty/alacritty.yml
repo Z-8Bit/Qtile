@@ -1,6 +1,6 @@
 colors:
   primary:
-    background: '#1a1e25'
+    background: '#1c1c1c'
     #'#312d38'
     foreground: '#eff0eb'
   cursor:
@@ -23,14 +23,14 @@ colors:
   bright:
     black:   '#686868'
     red:     '#ff2121'
-    green:   '#5af78e'
+    green:   '#12f45b'
     yellow:  '#f3f99d'
     blue:    '#6a9aff'
     magenta: '#FF55FF'
     cyan:    '#9aedfe'
     white:   '#eff0eb'
 
-background_opacity: 0.9
+background_opacity: 0.8
 
 font:
   normal:
