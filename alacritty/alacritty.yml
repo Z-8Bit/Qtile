@@ -45,6 +45,8 @@ window:
     y: 8
 
 cursor:
+  style:
+    shape: Beam
   unfocused_hollow: true 
   
 env:
