@@ -10,3 +10,6 @@ My Qtile dotfiles.
 
 1. Decide if you want the bare minimum for my qtile setup, or all my applications and programs, the minimal one doesn't break anything.
 2. chmod +x qtile-big-setup.sh or chmod +x qtile-base-setup.sh
+3. Run the scripts ``./qtile-big-setup.sh or ./qtile-base-setup.sh
+4. Type the sudo password whenever asked.
+5. Enjoy your new Qtile setup!
