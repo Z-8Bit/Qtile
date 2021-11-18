@@ -4,3 +4,4 @@ picom &
 /usr/bin/nitrogen --set-zoom-fill --random Pictures/Wallpapers --save
 nm-applet &
 blueman-applet &
+touchegg &
