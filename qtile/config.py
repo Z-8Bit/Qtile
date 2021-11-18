@@ -30,7 +30,8 @@ def window_to_next_group(qtile):
 
 keys = [
     Key([mod], "r", lazy.spawn("rofi -show drun")),
-    Key([mod], "d", lazy.spawn("blurlock")),
+    Key([mod], "x", lazy.spawn("blurlock")),
+    Key([mod], "d", lazy.spawn("findex")),
 
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -q set Master 5%-")),
@@ -39,10 +40,10 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("backlight_control -5")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("backlight_control +5")),
 
-    Key([mod], "Return", lazy.spawn("xterm")),
+    Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod1], "p", lazy.spawn("pavucontrol")),
     Key([mod1], "n", lazy.spawn("thunar")),
-    Key([mod1], "a", lazy.spawn("alacritty")),
+    Key([mod1], "a", lazy.spawn("xterm")),
     Key([mod1], "v", lazy.spawn("vscodium")),
     Key([mod1], "d", lazy.spawn("discord")),
     Key([mod1], "s", lazy.spawn("spotify")),
@@ -149,9 +150,7 @@ for i in groups:
         Key([mod], i.name, lazy.group[i.name].toscreen(toggle=False),
             desc="Switch to group {}".format(i.name)),
 
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=False),
-            desc="Switch to & move focused window to group {}".format(i.name)),
-        Key([mod1, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
             desc="Switch to & move focused window to group {}".format(i.name)),
     ])
 
@@ -160,7 +159,7 @@ for i in groups:
 layouts = [
     layout.MonadTall(margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b"),
     layout.MonadWide(margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b"),
-    layout.Bsp (margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b", fair=False),
+    layout.Bsp (margin=5, border_width=2, border_focus="#007dcc", border_normal="#414a5b", fair=False),
     layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
 ]
@@ -407,10 +406,11 @@ screens = [
                     background = colors[6],
                 ),
               ],
-            31,
-        background=colors[9],
+            34,
+        background = colors[9],
         #margin=[12,20,4,20],
-        margin=[8,8,2,8],
+        #margin=[8,8,2,8],
+        margin=[0,0,2,0],
         opacity= 1.0,
         ),
     ),
