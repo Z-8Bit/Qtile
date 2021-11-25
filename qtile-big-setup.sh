@@ -34,6 +34,9 @@ RED='\033[0;31m'
 sleep 5
 echo -e "${RED}Please add ~/Pictures/Wallpapers in nitrogen's preferences"
 
+sudo cp ~/Downloads/Qtile/lightdm-gtk-greeter.conf /etc/lightdm/
+sudo cp ~/Pictures/Wallpapers/ARTWORK-wanderer-above-the-sea-of-fog.jpg /etc/lightdm/
+
 sleep 5
 echo -e "${RED}PLEASE REBOOT NOW"
 
