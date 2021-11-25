@@ -17,7 +17,7 @@ cp ~/Downloads/Qtile/qtile/config.py ~/.config/qtile/
 cp ~/Downloads/Qtile/alacritty/alacritty.yml ~/.config/alacritty/
 cp ~/Downloads/Qtile/dunst/dunstrc ~/.config/dunst/
 cp ~/Downloads/Qtile/rofi/* ~/.config/rofi/
-cp ~/Downloads/touchegg/touchegg.conf ~/.config/touchegg/
+cp ~/Downloads/Qtile/touchegg/touchegg.conf ~/.config/touchegg/
 cp ~/Downloads/Qtile/neofetch/config.conf ~/.config/neofetch/
 cp ~/Downloads/Qtile/picom.conf ~/.config/
 
