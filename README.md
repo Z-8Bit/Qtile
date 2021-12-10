@@ -1,7 +1,8 @@
 # Qtile
 ### My Qtile dotfiles.
 
-![bubblegum](https://user-images.githubusercontent.com/72144072/141251614-8fc37b35-77f3-4828-b7f0-887ed7ce5880.png)
+![image](https://user-images.githubusercontent.com/72144072/145614144-40081354-e999-4b40-a8e1-bf9561a6c99e.png)
+
 
 ### My alternate configuration of the bar.
 ![image](https://user-images.githubusercontent.com/72144072/145613683-0b9e325d-71b8-4480-bbd5-3e9970df4d7e.png)
