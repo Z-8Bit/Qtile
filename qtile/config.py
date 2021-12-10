@@ -246,7 +246,7 @@ screens = [
                 widget.TextBox(
                     text = "\uE0B6", 
                     font = "Font Awesome 5 Free", 
-                    fontsize = 28, 
+                    fontsize = 29, 
                     foreground = colors[6], 
                     background = colors[9], 
                     padding = 0, 
@@ -302,7 +302,7 @@ screens = [
                 widget.TextBox(
                     text = "\uE0B6", 
                     font = "Font Awesome 5 Free", 
-                    fontsize = 28, 
+                    fontsize = 29, 
                     foreground = colors[4], 
                     background = colors[6], 
                     padding = 0, 
@@ -354,7 +354,7 @@ screens = [
                 widget.TextBox(
                     text = "\uE0B6", 
                     font = "Font Awesome 5 Free", 
-                    fontsize = 28, 
+                    fontsize = 29, 
                     foreground = colors[6], 
                     background = colors[4], 
                     padding = 0, 
