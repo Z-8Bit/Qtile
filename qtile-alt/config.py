@@ -249,8 +249,8 @@ screens = [
                 widget.Memory(
                     background=colors[0],
                     foreground=colors[3],
-                    measure_mem='G',
-                    format='{MemUsed: .2f} GB'
+                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
+                    format = '{MemUsed: .0f} MB',
                 ),
                 widget.Sep(
                     padding=6,
