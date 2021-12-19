@@ -59,11 +59,11 @@ background = "#1a1e25"
 foreground = "#f9f9f9"
 
 [urgency_normal]
-timeout = 6
+timeout = 1
 background = "#1a1e25"
 foreground = "#f9f9f9"
 
 [urgency_critical]
-timeout = 0
+timeout = 30
 background = "#1a1e25"
 foreground = "#f9f9f9"
