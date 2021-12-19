@@ -29,16 +29,16 @@ def window_to_next_group(qtile):
 ################# USER SHORTCUTS #################
 
 keys = [
-    Key([mod], "r", lazy.spawn("rofi -show drun")),
+    Key([mod1], "r", lazy.spawn("rofi -show drun")),
     Key([mod], "x", lazy.spawn("blurlock")),
     Key([mod], "d", lazy.spawn("findex")),
 
-    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -q set Master 5%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -q set Master 5%+")),
+    Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("volume.sh down")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("volume.sh up")),
     
-    Key([], "XF86MonBrightnessDown", lazy.spawn("backlight_control -5")),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("backlight_control +5")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightness.sh down")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightness.sh up")),
 
     Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod1], "p", lazy.spawn("pavucontrol")),

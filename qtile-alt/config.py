@@ -29,16 +29,16 @@ def window_to_next_group(qtile):
 ################# USER SHORTCUTS #################
 
 keys = [
-    Key([mod], "r", lazy.spawn("rofi -show drun")),
+    Key([mod1], "r", lazy.spawn("rofi -show drun")),
     Key([mod], "x", lazy.spawn("blurlock")),
     Key([mod], "d", lazy.spawn("findex")),
 
-    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -q set Master 5%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -q set Master 5%+")),
+    Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("volume.sh down")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("volume.sh up")),
     
-    Key([], "XF86MonBrightnessDown", lazy.spawn("backlight_control -5")),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("backlight_control +5")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightness.sh down")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightness.sh up")),
 
     Key([mod], "Return", lazy.spawn("alacritty")),
     Key([mod1], "p", lazy.spawn("pavucontrol")),
@@ -264,8 +264,13 @@ screens = [
                     background=colors[0],
                     foreground=colors[8],
                 ),
+                widget.Sep(
+                    padding=4,
+                    linewidth=0,
+                    background=colors[0],
+                ),
                 widget.TextBox(
-                    text=" ",
+                    text="",
                     font="Font Awesome 5 Free",
                     foreground=colors[8],
                     background=colors[0],
@@ -300,15 +305,15 @@ screens = [
                     background=colors[0],
                 ),
                 widget.TextBox(
-                    text = " ",
+                    text = "",
                     foreground = colors[1],
                     background = colors[0],
                     padding = 1,
                     font = "Font Awesome 5 Free",
-                    fontsize = 15,
+                    fontsize = 13,
                 ),
                 widget.Sep(
-                    padding=6,
+                    padding=1,
                     linewidth=0,
                     background=colors[0],
                 ),
@@ -336,12 +341,17 @@ screens = [
                     background=colors[0],
                 ),
                 widget.TextBox(
-                    text='  ',
+                    text='',
                     font="Font Awesome 5 Free",
                     fontsize='14',
-                    padding=4,
+                    padding=0,
                     background=colors[0],
                     foreground=colors[2],
+                ),
+                widget.Sep(
+                    padding=4,
+                    linewidth=0,
+                    background=colors[0],
                 ),
                 widget.Clock(
                     font = "comic sans ms",
@@ -383,7 +393,7 @@ screens = [
                     low_foreground = colors[5],
                     font = "novamono for powerline",
                     update_interval = 1,
-                    padding = 10,
+                    padding = 5,
                     format = '{percent:2.0%}',
                 ),
             ],
@@ -394,7 +404,6 @@ screens = [
             ),
        ),
     ]
-
 
 ################# Drag floating layouts #################
 mouse = [
