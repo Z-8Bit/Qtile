@@ -143,6 +143,9 @@ groups= [
     Group("6",
           label="SYS",
           ),
+    Group("7",
+          label="MISC",
+          ),
 ]
 
 for i in groups:
@@ -150,7 +153,7 @@ for i in groups:
         Key([mod], i.name, lazy.group[i.name].toscreen(toggle=False),
             desc="Switch to group {}".format(i.name)),
 
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=False),
             desc="Switch to & move focused window to group {}".format(i.name)),
     ])
 
@@ -163,7 +166,6 @@ layouts = [
     layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
 ]
-
 
 colors =  [
         ["#FFFFFF", "#FFFFFF"], # white / color 0
@@ -416,7 +418,6 @@ screens = [
     ),
 ]
 
-
 ################# Drag floating layouts #################
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(),
@@ -447,13 +448,4 @@ focus_on_window_activation = "smart"
 reconfigure_screens = True
 
 auto_minimize = True
-
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "LG3D"
