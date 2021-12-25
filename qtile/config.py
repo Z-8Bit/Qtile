@@ -160,9 +160,9 @@ for i in groups:
 # LAYOUTS
 
 layouts = [
-    layout.MonadTall(margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b"),
-    layout.MonadWide(margin=6, border_width=2, border_focus="#007dcc", border_normal="#414a5b"),
-    layout.Bsp (margin=5, border_width=2, border_focus="#007dcc", border_normal="#414a5b", fair=False),
+    layout.MonadTall(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
+    layout.MonadWide(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
+    layout.Bsp (margin=5, border_width=2, border_focus="#0aaccf", border_normal="#414a5b", fair=False),
     layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
 ]

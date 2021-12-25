@@ -7,6 +7,6 @@ colors */
   bg:  #1a1e25;
   se:  #59C2FF;
   fg:  #cbcbcb;
-  ac:  #007dcc;
+  ac:  #0aaccf;
   st:  #C2D94C;
 }
