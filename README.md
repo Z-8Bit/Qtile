@@ -9,7 +9,7 @@
 ![Qtile](https://user-images.githubusercontent.com/72144072/139215711-ee601367-baa0-4c1a-91e6-10a095c83d77.png)
 
 
-### Setting up 
+## Setting up 
 
 1. Clone the repository with **`git clone https://github.com/Qtile.git`** and cd into it **`cd Qtile`**
 2. Make the script an executable by doing **`chmod +x qtile-setup.sh`** 
