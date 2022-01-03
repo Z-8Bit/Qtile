@@ -12,22 +12,22 @@ colors:
 
   normal:
     black:   '#282a36'
-    red:     '#ff5c57'
-    green:   '#5af78e'
-    yellow:  '#f3f99d'
-    blue:    '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan:    '#9aedfe'
+    red:     '#e71903'
+    green:   '#03e76c'
+    yellow:  '#e7e303'
+    blue:    '#036ee7'
+    magenta: '#e7039c'
+    cyan:    '#4fdefe'
     white:   '#f1f1f0'
 
   bright:
-    black:   '#686868'
+    black:   '#545672'
     red:     '#ff2121'
     green:   '#12f45b'
-    yellow:  '#f3f99d'
-    blue:    '#6a9aff'
-    magenta: '#FF55FF'
-    cyan:    '#9aedfe'
+    yellow:  '#fcfa53'
+    blue:    '#53a3fc'
+    magenta: '#fb53c4'
+    cyan:    '#81faf5'
     white:   '#eff0eb'
 
 background_opacity: 0.8
@@ -37,12 +37,12 @@ font:
     family: JetBrainsMono Nerd Font
   bold:
     family: JetBrainsMono Nerd Font
-  size: 8
+  size: 12
 
 window:
   padding:
-    x: 8
-    y: 8
+    x: 10
+    y: 10 
 
 cursor:
   style:
