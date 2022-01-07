@@ -37,6 +37,10 @@ echo -e "${RED}Please add ~/Pictures/Wallpapers in nitrogen's preferences"
 sudo cp ~/Downloads/Qtile/lightdm-gtk-greeter.conf /etc/lightdm/
 sudo cp ~/Pictures/Wallpapers/ARTWORK-wanderer-above-the-sea-of-fog.jpg /etc/lightdm/
 
+# sudo pacman -S refind && refind-install
+# git clone https://github.com/josephsurin/refind-theme-circle.git && sudo rm -r ./refind-theme-circle/{screenshots,.git}
+# sudo cp -r refind-theme-circle /boot/efi/EFI/refind/ && sudo echo "include refind-theme-circle/theme.conf" >> /boot/efi/EFI/refind/refind.conf
+
 sleep 5
 echo -e "${RED}PLEASE REBOOT NOW"
 
