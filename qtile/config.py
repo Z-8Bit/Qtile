@@ -41,6 +41,7 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightness.sh up")),
 
     Key([mod], "Return", lazy.spawn("alacritty")),
+    Key([mod1], "Return", lazy.spawn("wezterm")),
     Key([mod1], "p", lazy.spawn("pavucontrol")),
     Key([mod1], "n", lazy.spawn("thunar")),
     Key([mod1], "a", lazy.spawn("xterm")),
@@ -52,6 +53,7 @@ keys = [
     Key([mod1], "l", lazy.spawn("lollypop")),
     Key([mod1], "t", lazy.spawn("teams-for-linux")),
     Key([mod1], "f", lazy.spawn("firefox-developer-edition")),
+    Key([mod1], "b", lazy.spawn("blueman-manager")),
     
     Key([mod, mod1], "q", lazy.spawn("shutdown.sh")),
     Key([mod, mod1], "r", lazy.spawn("reboot.sh")),
@@ -114,7 +116,7 @@ keys = [
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod], "q", lazy.window.kill()),
     Key([mod, "shift"], "q", lazy.shutdown()),
-    Key([mod], "c", lazy.restart()),   
+    Key([mod, "shift"], "r", lazy.restart()),   
 
 ]
 
@@ -145,7 +147,7 @@ groups= [
           ),
     Group("7",
           label="MISC",
-          ),
+          ),  
 ]
 
 for i in groups:
@@ -161,10 +163,12 @@ for i in groups:
 
 layouts = [
     layout.MonadTall(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
-    layout.MonadWide(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
+    #layout.MonadWide(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
     layout.Bsp (margin=5, border_width=2, border_focus="#0aaccf", border_normal="#414a5b", fair=False),
-    layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
+    #layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
+    #layout.zoomy.Zoomy(columnwidth=400,margin=2,),
+    #layout.tree.TreeTab(active_bg="#0aaccf",active_fg="#1a1e25",bg_color="#1a1e25",font='comic sans ms',inactive_bg="#303643",border_width=2, border_focus="#0aaccf", border_normal="#414a5b", vspace=2,margin_left=4,margin_y=4,panel_width=200),
 ]
 
 colors =  [
