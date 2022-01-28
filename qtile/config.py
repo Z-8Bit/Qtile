@@ -288,9 +288,9 @@ screens = [
                     text = "",
                     foreground = colors[9],
                     background = colors[6],
-                    padding = 2,
+                    padding = 3,
                      font = "Font Awesome 5 Free",
-                    fontsize = 12,
+                    fontsize = 24,
                 ),
                 widget.OpenWeather(
                     font = "comic sans ms",
