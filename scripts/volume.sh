@@ -36,7 +36,7 @@ function send_notification {
     fi
   fi
   # Send the notification
-  dunstify "VOLUME" "$bar" -i $icon_name -r 5555 -u normal
+  dunstify "Volume : $volume" "$bar" -i $icon_name -r 5555 -u normal
   # notify-send.sh "Volume : $volume" -i "$icon_name" -t 2000 --replace=555
 }
 

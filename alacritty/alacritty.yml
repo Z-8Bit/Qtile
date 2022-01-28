@@ -1,6 +1,6 @@
 colors:
   primary:
-    background: '#1c1c1c'
+    background: '#1a1e25'
     #'#312d38'
     foreground: '#eff0eb'
   cursor:
@@ -12,42 +12,42 @@ colors:
 
   normal:
     black:   '#282a36'
-    red:     '#e71903'
-    green:   '#03e76c'
-    yellow:  '#e7e303'
-    blue:    '#036ee7'
-    magenta: '#e7039c'
-    cyan:    '#4fdefe'
+    red:     '#ff5c57'
+    green:   '#5af78e'
+    yellow:  '#f3f99d'
+    blue:    '#20e6fd'
+    magenta: '#ff6ac1'
+    cyan:    '#9aedfe'
     white:   '#f1f1f0'
 
   bright:
-    black:   '#545672'
+    black:   '#686868'
     red:     '#ff2121'
-    green:   '#12f45b'
-    yellow:  '#fcfa53'
-    blue:    '#53a3fc'
-    magenta: '#fb53c4'
-    cyan:    '#81faf5'
+    green:   '#5af78e'
+    yellow:  '#f3f99d'
+    blue:    '#1c8be9'
+    magenta: '#FF55FF'
+    cyan:    '#61afef'
     white:   '#eff0eb'
 
-window_opacity: 0.8
+background_opacity: 0.8
 
 font:
   normal:
     family: JetBrainsMono Nerd Font
   bold:
     family: JetBrainsMono Nerd Font
-  size: 12
+  size: 8
 
 window:
   padding:
-    x: 10
-    y: 10 
+    x: 12
+    y: 12
 
 cursor:
   style:
     shape: Beam
-    
+  
 env:
   TERM: xterm-256color
 

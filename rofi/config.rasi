@@ -4,8 +4,9 @@ configuration {
     modi:                           "drun";
 	font:							"JetBrainsMono Nerd Font 13";
     show-icons:                     true;
-    display-drun: 					"";
-/*    display-drun: 					" or ";*/
+/*    display-drun: 					"";*/
+    display-drun: 					"";
+/*    display-drun:                   ""*/
     drun-display-format:            "{icon} {name}";
 	sidebar-mode: 					true;
 }

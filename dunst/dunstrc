@@ -57,7 +57,6 @@ mouse_right_click = close_all
 timeout = 3
 background = "#1a1e25"
 foreground = "#f9f9f9"
-# Test
 
 [urgency_normal]
 timeout = 1
