@@ -26,6 +26,7 @@ cp ~/Downloads/Qtile/xprofile ~/.xprofile
 cp ~/Downloads/Qtile/Xresources ~/.Xresources
 chmod +x ~/Downloads/Qtile/scripts/*.sh
 sudo cp ~/Downloads/Qtile/scripts/*.sh /usr/bin/
+sudo cp ~/Downloads/Qtile/30-touchpad.conf /etc/X11/xorg.conf.d
 refind-install
 
 git clone https://github.com/Z-8Bit/Wallpapers ~/Pictures/Wallpapers
