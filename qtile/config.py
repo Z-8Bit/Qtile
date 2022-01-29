@@ -389,7 +389,7 @@ screens = [
                 ),
                 widget.TextBox(
                     text = "", 
-                    font = "Font Awesome 5 Free", 
+                    font = "JetBrainsMono Nerd Font", 
                     fontsize = 14, 
                     foreground = colors[9], 
                     background = colors[6],
