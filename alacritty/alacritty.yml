@@ -29,9 +29,7 @@ colors:
     magenta: '#FF55FF'
     cyan:    '#61afef'
     white:   '#eff0eb'
-
-background_opacity: 0.8
-
+    
 font:
   normal:
     family: JetBrainsMono Nerd Font
@@ -40,6 +38,7 @@ font:
   size: 8
 
 window:
+  opacity: 0.8
   padding:
     x: 12
     y: 12
