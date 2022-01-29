@@ -11,7 +11,7 @@ done
 
 git clone https://github.com/Z-8Bit/Qtile.git ~/Downloads/Qtile
 
-mkdir -p ~/.config/{alacritty,cava,dunst,qtile,rofi,neofetch,touchegg}
+mkdir -p ~/.config/{alacritty,cava,dunst,qtile,moc,rofi,neofetch,touchegg}
 
 cp ~/Downloads/Qtile/qtile/config.py ~/.config/qtile/
 cp ~/Downloads/Qtile/alacritty/alacritty.yml ~/.config/alacritty/
@@ -20,6 +20,7 @@ cp ~/Downloads/Qtile/rofi/* ~/.config/rofi/
 cp ~/Downloads/Qtile/touchegg/touchegg.conf ~/.config/touchegg/
 cp ~/Downloads/Qtile/neofetch/config.conf ~/.config/neofetch/
 cp ~/Downloads/Qtile/picom.conf ~/.config/
+cp -r ~/Downloads/Qtile/moc/* ~/.config/moc/
 
 sudo systemctl start touchegg
 cp ~/Downloads/Qtile/xprofile ~/.xprofile
