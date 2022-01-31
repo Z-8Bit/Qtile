@@ -1,9 +1,8 @@
 sudo pacman -Syu --needed base-devel
 git clone https://aur.archlinux.org/paru-bin.git
-cd paru-bin
-makepkg -si
+cd paru-bin && makepkg -si
 
-paru -S --noconfirm alacritty backlight_control bluez bluez-utils blueman discord dunst firefox-developer-edition fluent-gtk-theme-git fluent-cursor-theme-git github-desktop-bin gvfs htop light lightdm lightdm-gtk-greeter lollypop lxappearance maim moc multimc-bin mpv neofetch nerd-fonts-complete network-manager-applet nitrogen noto-fonts-emoji ntfs-3g pamixer pavucontrol picom-jonaburg-git polkit-gnome powertop pulseaudio pulseaudio-alsa pulseaudio-bluetooth qbittorrent-dark-git qogir-gtk-theme-git qtile rofi spotify teams-for-linux touchegg touche tela-icon-theme-bin thunar ttf-unifont ttf-ms-fonts viewnior vscodium-bin whatsapp-nativefier-dark xclip xorg zoom
+paru -S --noconfirm alacritty alsa-tools alsa-utils  backlight_control blueman bluez bluez-utils btop dbus-python discord dunst firefox-developer-edition fluent-cursor-theme-git fluent-gtk-theme-git github-desktop-bin gnome-screenshot gparted gvfs htop jdk-temurin light lightdm lightdm-gtk-greeter lollypop lxappearance maim microsoft-edge-stable-bin moc mpv multimc-bin neofetch nerd-fonts-jetbrains-mono network-manager-applet nitrogen noto-fonts-emoji ntfs-3g pamixer pavucontrol picom-jonaburg-git polkit-gnome powertop pulseaudio pulseaudio-alsa pulseaudio-bluetoothp ulseaudio-jack python-gobject qbittorrent-dark-git qogir-gtk-theme-git qtile refind rofi spotify teams-for-linux tela-icon-theme thunar touche touchegg transmission-gtk ttf-ms-fonts ttf-unifont viewnior vscodium-bin whatsapp-nativefier-dark xclip xorg zoom zsh 
 
 for serfievice in bluetooth NetworkManager touchegg.service; do
   sudo systemctl enable --now $service
@@ -39,11 +38,11 @@ echo -e "${RED}Please add ~/Pictures/Wallpapers in nitrogen's preferences"
 sudo cp ~/Downloads/Qtile/lightdm-gtk-greeter.conf /etc/lightdm/
 sudo cp ~/Pictures/Wallpapers/ARTWORK-wanderer-above-the-sea-of-fog.jpg /etc/lightdm/
 
-# sudo pacman -S refind && refind-install
+# refind-install
 # git clone https://github.com/josephsurin/refind-theme-circle.git && sudo rm -r ./refind-theme-circle/{screenshots,.git}
 # sudo cp -r refind-theme-circle /boot/efi/EFI/refind/ && sudo echo "include refind-theme-circle/theme.conf" >> /boot/efi/EFI/refind/refind.conf
 
-sudo systemctl enable lightdm && sudo reboot now
+echo -e "{$RED}Reboot now and then enable lightdm (sudo systemctl enable lightdm.service)"
 
 
 
