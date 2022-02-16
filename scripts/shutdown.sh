@@ -1,4 +1,4 @@
 #!/bin/bash
 
+notify-send "Shutting Down System"
 shutdown now
-notify-send "Shutting Down"

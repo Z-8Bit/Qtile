@@ -1,4 +1,4 @@
 #!/bin/bash
 
-reboot now
 notify-send "Restarting System"
+shutdown -r now
