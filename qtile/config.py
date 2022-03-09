@@ -29,8 +29,7 @@ def window_to_next_group(qtile):
 ################# USER SHORTCUTS #################
 
 keys = [
-    Key([mod1], "r", lazy.spawn("rofi -show drun")),
-    Key([mod], "x", lazy.spawn("blurlock")),
+    Key([mod1], "r", lazy.spawn("rofi -show drun -auto-select")),
     Key([mod], "d", lazy.spawn("findex")),
 
     Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
@@ -41,16 +40,15 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightness.sh up")),
 
     Key([mod], "Return", lazy.spawn("alacritty")),
-    Key([mod1], "Return", lazy.spawn("wezterm")),
     Key([mod1], "p", lazy.spawn("pavucontrol")),
     Key([mod1], "n", lazy.spawn("thunar")),
-    Key([mod1], "a", lazy.spawn("xterm")),
     Key([mod1], "v", lazy.spawn("vscodium")),
     Key([mod1], "d", lazy.spawn("discord")),
     Key([mod1], "s", lazy.spawn("spotify")),
-    Key([mod1], "q", lazy.spawn("qbittorrent")),
+    Key([mod1], "q", lazy.spawn("transmission-gtk")),
     Key([mod1], "m", lazy.spawn("multimc")),
-    Key([mod1], "l", lazy.spawn("lollypop")),
+    Key([mod1, "control"], "l", lazy.spawn("alacritty -e killmocp.sh")),
+    Key([mod1], "l", lazy.spawn("alacritty -e mocp -M ~/.config/moc")),
     Key([mod1], "t", lazy.spawn("teams-for-linux")),
     Key([mod1], "f", lazy.spawn("firefox-developer-edition")),
     Key([mod1], "b", lazy.spawn("blueman-manager")),
@@ -123,30 +121,30 @@ keys = [
 groups= [
 
     Group("1",
-          label="WEB",
+          label="",
           ),
 
     Group("2",
-          label="TERM",
+          label="",
           ),
 
     Group("3",
-          label="DEV",
+          label="",
           ),
 
     Group("4",
-          label="FUN",
+          label="",
           ),
 
     Group("5",
-          label="FILES",
+          label="",
           ),
 
     Group("6",
-          label="SYS",
+          label="",
           ),
     Group("7",
-          label="MISC",
+          label="",
           ),  
 ]
 
@@ -162,7 +160,7 @@ for i in groups:
 # LAYOUTS
 
 layouts = [
-    layout.MonadTall(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
+    layout.MonadTall(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b", fair=False),
     #layout.MonadWide(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
     layout.Bsp (margin=5, border_width=2, border_focus="#0aaccf", border_normal="#414a5b", fair=False),
     #layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
@@ -173,19 +171,19 @@ layouts = [
 
 colors =  [
         ["#FFFFFF", "#FFFFFF"], # white / color 0
-        ["#7bf52e", "#99f75e"], # pink / color 1
+        ["#7bf52e", "#99f75e"], # lime / color 1
         ["#384657", "#384657"], # dark gray / color 2
-        ["#b2b2b2", "#b2b2b2"], # gray / color 3
+        ["#b2b2b2", "#b2b2b2"], # light gray / color 3
         ["#0aaccf", "#0aaccf"], # cyan / color 4
         ["#6bb7fa", "#6bb7fa"], # blue / color 5
         ["#bf0be2", "#d42bf5"], # purple / color 6
-        ["#5268f9", "#5268f9"], # green / color 7
-        ["#8494fb", "#8494fb"], # red / color 8
+        ["#5268f9", "#5268f9"], # dark blue / color 7
+        ["1a1e25", "#1a1e25"], # navy blue / color 8
         ["#1a1e25", "#1a1e25"]] # black / color 9
         
 
 widget_defaults = dict(
-    font='comic sans ms',
+    font='JetBrainsMono Nerd Font',
     fontsize=12,
     padding=3,
 )
@@ -208,37 +206,34 @@ screens = [
                     background = colors[9],
                 ),
                 widget.GroupBox(
-                    font = "comic sans ms",
-                    fontsize = 11,
-                    margin_y = 4,
+                    font = "JetBrainsMono Nerd Font",
+                    fontsize = 15,
+                    margin_y = 2,
                     margin_x = 2,
+                    center_aligned = True,
                     padding_y = 5,
-                    padding_x = 5,
-                    borderwidth = 5,
-                    active = colors[0],
-                    inactive = colors[3],
-                    rounded = True,
-                    highlight_color = colors[2],
-                    highlight_method = "line",
-                    this_current_screen_border = colors[5],
-                    this_screen_border = colors [6],
-                    other_current_screen_border = colors[5],
-                    other_screen_border = colors[1],
-                    foreground = colors[8],
-                    background = colors[9],
+                    padding_x = 10,
+                    active = "#f7768e",
+                    inactive = colors[0],
+                    this_current_screen_border = "#69d588",
+                    highlight_color = colors[9],
+                    urgent_alert_method = 'text',
+                    highlight_method = "text",
+                    #foreground = "#D8DEE9",
+                    background = colors[8],
                 ),
                 widget.Spacer(
                     background = colors[9],
-                    length = 450,
+                    length = 550,
                 ),
                 widget.Clock(
                     font = "comic sans ms",
                     foreground = colors[0],
-                    background = colors[9],
+                    background = colors[8],
                     fontsize = 15,
                     format = '%a %d %B, %H:%M',
                 ),
-                widget.Spacer(background = colors[9]),
+                widget.Spacer(background = colors[8]),
                 widget.Systray(
                     background = colors[9],
                     icons_size = 20,
@@ -247,7 +242,7 @@ screens = [
                 widget.Sep(
                     linewidth = 0,
                     padding = 6,
-                    background = colors[9],
+                    background = colors[8],
                 ),
                 widget.TextBox(
                     text = "\uE0B6", 
@@ -281,14 +276,14 @@ screens = [
                 #    ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 6,
+                    padding = 0,
                     background = colors[6],
                 ),
                 widget.TextBox(
                     text = "",
                     foreground = colors[9],
                     background = colors[6],
-                    padding = 3,
+                    padding = 2,
                      font = "Font Awesome 5 Free",
                     fontsize = 24,
                 ),
@@ -332,14 +327,14 @@ screens = [
                 ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 6,
+                    padding = 0,
                     background = colors[4],
                 ),
                 widget.TextBox(
                     text = " ",
                     foreground = colors[9],
                     background = colors[4],
-                    padding = 1,
+                    padding = 6,
                     fontsize = 20,
                 ),
                 widget.CPU(
@@ -367,12 +362,12 @@ screens = [
                     update_interval = 60,
                 ),
                 widget.TextBox(
-                    text = " ",
+                    text = "墳",
                     foreground = colors[9],
                     background = colors[6],
-                    padding = 1,
+                    padding = 0,
                     font = "Font Awesome 5 Free",
-                    fontsize = 13,
+                    fontsize = 24,
                 ),
                 widget.Volume(
                     foreground = colors[9],
@@ -388,12 +383,12 @@ screens = [
                     background = colors[6],
                 ),
                 widget.TextBox(
-                    text = "", 
+                    text = " ", 
                     font = "JetBrainsMono Nerd Font", 
                     fontsize = 14, 
                     foreground = colors[9], 
                     background = colors[6],
-                    padding = 1,
+                    padding = 0,
                     ),
                 widget.Battery(
                     foreground = colors[9],
