@@ -1,6 +1,6 @@
 ## Qtile dotfiles.
 
-![image](https://user-images.githubusercontent.com/72144072/145614144-40081354-e999-4b40-a8e1-bf9561a6c99e.png)
+![image](https://user-images.githubusercontent.com/72144072/157385712-69b475f6-1996-45b9-ba1f-a0379b3288c6.png)
 
 ### An alternate configuration of the bar.
 ![image](https://user-images.githubusercontent.com/72144072/145613683-0b9e325d-71b8-4480-bbd5-3e9970df4d7e.png)
