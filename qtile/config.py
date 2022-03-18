@@ -26,11 +26,10 @@ def window_to_next_group(qtile):
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i + 1].name)
 
-################# USER SHORTCUTS #################
+# USER SHORTCUTS 
 
 keys = [
     Key([mod1], "r", lazy.spawn("rofi -show drun -auto-select")),
-    Key([mod], "d", lazy.spawn("findex")),
 
     Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("volume.sh down")),
@@ -47,8 +46,9 @@ keys = [
     Key([mod1], "s", lazy.spawn("spotify")),
     Key([mod1], "q", lazy.spawn("transmission-gtk")),
     Key([mod1], "m", lazy.spawn("multimc")),
-    Key([mod1, "control"], "l", lazy.spawn("alacritty -e killmocp.sh")),
-    Key([mod1], "l", lazy.spawn("alacritty -e mocp -M ~/.config/moc")),
+    #Key([mod1, "control"], "l", lazy.spawn("alacritty -e killmocp.sh")),
+    #Key([mod1], "l", lazy.spawn("alacritty -e mocp -M ~/.config/moc")),
+    Key([mod1], "l", lazy.spawn("audacious")),
     Key([mod1], "t", lazy.spawn("teams-for-linux")),
     Key([mod1], "f", lazy.spawn("firefox-developer-edition")),
     Key([mod1], "b", lazy.spawn("blueman-manager")),
@@ -56,15 +56,14 @@ keys = [
     Key([mod, mod1], "q", lazy.spawn("shutdown.sh")),
     Key([mod, mod1], "r", lazy.spawn("reboot.sh")),
 
-############## SCREENSHOTS ###################
+# SCREENSHOTS 
     
    # Key(["shift"], "Print", lazy.spawn("maim | xclip -selection clipboard -t image/png")),
    # Key([mod], "Print", lazy.spawn("maim --select | xclip -selection clipboard -t image/png")),
    Key([], "Print", lazy.spawn("clip.sh")),
    Key(["shift"], "Print", lazy.spawn("shot.sh")),
 
-
-################# SWITCH LAYOUT ###################
+# SWITCH LAYOUT 
 
 # TOGGLE FLOATING LAYOUT
     Key([mod], "t", lazy.window.toggle_floating()),
@@ -160,13 +159,13 @@ for i in groups:
 # LAYOUTS
 
 layouts = [
-    layout.MonadTall(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b", fair=False),
+    layout.MonadTall(margin=6, border_width=2, border_focus="#69d588", border_normal="#414a5b", fair=False),
     #layout.MonadWide(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
-    layout.Bsp (margin=5, border_width=2, border_focus="#0aaccf", border_normal="#414a5b", fair=False),
+    layout.Bsp (margin=5, border_width=2, border_focus="#69d588", border_normal="#414a5b", fair=False),
     #layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
-    #layout.zoomy.Zoomy(columnwidth=400,margin=2,),
     #layout.tree.TreeTab(active_bg="#0aaccf",active_fg="#1a1e25",bg_color="#1a1e25",font='comic sans ms',inactive_bg="#303643",border_width=2, border_focus="#0aaccf", border_normal="#414a5b", vspace=2,margin_left=4,margin_y=4,panel_width=200),
+    #layout.MonadThreeCol(align="MonadTall_left", border_focus="#69d588", border_normal="#414a5b",main_centered=True),
 ]
 
 colors =  [
@@ -417,7 +416,7 @@ screens = [
     ),
 ]
 
-################# Drag floating layouts #################
+# DRAG FLOATING LAYOUTS
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(),
          start=lazy.window.get_position()),
@@ -432,19 +431,11 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_width=0,
-    float_rules=[
-    *layout.Floating.default_float_rules,
-    Match(wm_class='confirmreset'),  # gitk
-    Match(wm_class='makebranch'),  # gitk
-    Match(wm_class='maketag'),  # gitk
-    Match(wm_class='ssh-askpass'),  # ssh-askpass
-    Match(title='branchdialog'),  # gitk
-    Match(title='pinentry'),  # GPG key password entry
-])
+    border_width=1,
+    border_focus="#69d588",
+)
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
-
 auto_minimize = True
 wmname = "LG3D"

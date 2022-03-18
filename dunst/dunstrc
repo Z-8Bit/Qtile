@@ -20,7 +20,7 @@ separator_height = 2
 padding = 8
 horizontal_padding = 11
 frame_width = 2
-frame_color = "#0aaccf"
+frame_color = "#69d588"
 separator_color = "#2a303b"
 
 font = mplus nerd font 10
@@ -45,7 +45,7 @@ corner_radius = 0
 icon_position = left
 max_icon_size = 80
 
-icon_path = /usr/share/icons/Tela-purple-dark/32/devices/:/usr/share/icons/Tela-purple-dark/32/status/
+#icon_path = /usr/share/icons/Tela-purple-dark/32/devices/:/usr/share/icons/Tela-purple-dark/32/status/
 # icon_path = /usr/share/icons/Tela-purple-dark/22/actions/:/usr/share/icons/Tela-purple-dark/22/devices/:/usr/share/icons/Tela-purple-dark/22/emblems/:/usr/share/icons/Tela-purple-dark/22/mimetypes/:/usr/share/icons/Tela-purple-dark/22/places/:/usr/share/icons/Tela-purple-dark/22/panel/
 browser = firefox-developer-edition
 
