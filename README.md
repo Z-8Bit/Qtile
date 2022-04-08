@@ -1,5 +1,9 @@
 ## Qtile dotfiles.
 
+### Polybar + Rofi
+![image](https://user-images.githubusercontent.com/72144072/162381713-7fab0c60-903b-4c86-8c83-2d6f4c44c696.png)
+
+Qtilebar
 ![image](https://user-images.githubusercontent.com/72144072/157385712-69b475f6-1996-45b9-ba1f-a0379b3288c6.png)
 
 ### An alternate configuration of the bar.
