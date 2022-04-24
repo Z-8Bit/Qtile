@@ -30,6 +30,8 @@ def window_to_next_group(qtile):
 
 keys = [
     Key([mod1], "r", lazy.spawn("rofi -show drun -auto-select")),
+    Key([mod1], "c", lazy.spawn("rofi -show filebrowser")),
+    Key([mod1], "e", lazy.spawn("powermenu.sh")),
 
     Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("volume.sh down")),
@@ -432,7 +434,7 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
     border_width=1,
-    border_focus="#69d588",
+    border_focus="#009999",
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"

@@ -76,7 +76,7 @@ listview {
 element {
   border:                           0 0 1px 0;
   padding:                          16px;
-  background-color:                 #2e343f;
+  background-color:                 @ex;
   text-color:                       #cbcbcb;
   margin:                           1;
   border-radius:                    6px;
