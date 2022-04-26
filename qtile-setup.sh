@@ -18,15 +18,15 @@ cp -r ~/Downloads/Qtile/dunst/* ~/.config/dunst/
 cp ~/Downloads/Qtile/rofi/* ~/.config/rofi/
 cp ~/Downloads/Qtile/touchegg/touchegg.conf ~/.config/touchegg/
 cp ~/Downloads/Qtile/neofetch/config.conf ~/.config/neofetch/
-cp ~/Downloads/Qtile/Misc/picom.conf ~/.config/
+cp ~/Downloads/Qtile/misc/picom.conf ~/.config/
 cp ~/Downloads/Qtile/moc/* ~/.config/moc/
 
 sudo systemctl start touchegg
-cp ~/Downloads/Qtile/Misc/xprofile ~/.xprofile
-cp ~/Downloads/Qtile/Misc/Xresources ~/.Xresources
+cp ~/Downloads/Qtile/misc/xprofile ~/.xprofile
+cp ~/Downloads/Qtile/misc/Xresources ~/.Xresources
 chmod +x ~/Downloads/Qtile/scripts/*.sh
 sudo cp ~/Downloads/Qtile/scripts/*.sh /usr/bin/
-sudo cp ~/Downloads/Qtile/Misc/30-touchpad.conf /etc/X11/xorg.conf.d
+sudo cp ~/Downloads/Qtile/misc/30-touchpad.conf /etc/X11/xorg.conf.d
 refind-install
 
 git clone https://github.com/Z-8Bit/Wallpapers ~/Pictures/Wallpapers
@@ -35,7 +35,7 @@ RED='\033[0;31m'
 sleep 5
 echo -e "${RED}Please add ~/Pictures/Wallpapers in nitrogen's preferences."
 
-sudo cp ~/Downloads/Qtile/Misc/lightdm-gtk-greeter.conf /etc/lightdm/
+sudo cp ~/Downloads/Qtile/misc/lightdm-gtk-greeter.conf /etc/lightdm/
 sudo cp ~/Pictures/Wallpapers/artwork.jpg /etc/lightdm/
 
 # refind-install
