@@ -30,7 +30,7 @@ def window_to_next_group(qtile):
 
 keys = [
     Key([mod1], "r", lazy.spawn("rofi -show drun -auto-select")),
-    Key([mod1], "c", lazy.spawn("rofi -show filebrowser")),
+    Key([mod1], "w", lazy.spawn("rofi-wifi-menu")),
     Key([mod1], "e", lazy.spawn("powermenu.sh")),
 
     Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
