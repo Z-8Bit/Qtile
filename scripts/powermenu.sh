@@ -4,15 +4,16 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi -theme ~/.config/rofi/power.rasi"
 
 # Options
+picom="Picom"
 bluetooth="Bluetooth"
 desktop="ModernFamily"
 update="Update"
 shutdown="Shutdown"
-reboot="Restart"
+reboot="Reboot"
 suspend="Suspend"
 
 # Variable passed to rofi
-options="$bluetooth\n$desktop\n$update\n$reboot\n$shutdown"
+options="$desktop\n$picom\n$shutdown\n$reboot\n$bluetooth\n$update"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -30,8 +31,11 @@ case $chosen in
     alacritty -e paru -Syu --ignore fluent-gtk-theme-git
         ;;
     $desktop)
-    thunar Desktop/Modern\ Family\ 2009\ Season\ 8/
+    thunar Desktop/Modern\ Family\ Season\ 10/
         ;;
+    $picom)
+    killall picom
+    	;;
     $bluetooth)
     alacritty -e ./blue.sh
         ;;

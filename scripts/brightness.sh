@@ -1,13 +1,8 @@
 #!/usr/bin/env bash
 
 # You can call this script like this:
-# $ ./brightnessControl.sh up
-# $ ./brightnessControl.sh down
-
-# Script inspired by these wonderful people:
-# https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
-# https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
-
+# $ ./brightness.sh up
+# $ ./brightness.sh down
 
 DIR="$HOME/.config/dunst"
 
@@ -28,12 +23,14 @@ function send_notification {
 case $1 in
   up)
     # increase the backlight by 5%
-    backlight_control +5
+    #backlight_control +4
+    sudo brillo -A 2 -q
     send_notification
     ;;
   down)
     # decrease the backlight by 5%
-    backlight_control -5
+    #backlight_control -4
+    sudo brillo -U 2 -q
     send_notification
     ;;
     esac
