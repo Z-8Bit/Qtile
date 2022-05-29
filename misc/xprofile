@@ -1,4 +1,4 @@
-/usr/bin/wall.sh
+sudo /usr/bin/wall.sh
 #nitrogen --restore
 /usr/bin/dunst &
 picom &
