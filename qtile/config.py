@@ -32,6 +32,7 @@ keys = [
     Key([mod1], "r", lazy.spawn("rofi -show drun -auto-select")),
     Key([mod1], "w", lazy.spawn("rofi-wifi-menu")),
     Key([mod1], "e", lazy.spawn("powermenu.sh")),
+    Key([mod1], "a", lazy.spawn("audacious.sh")),
 
     Key([], "XF86AudioMute", lazy.spawn("volume.sh mute")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("volume.sh down")),
@@ -160,14 +161,15 @@ for i in groups:
 # LAYOUTS
 
 layouts = [
-    layout.MonadTall(margin=6, border_width=2, border_focus="#69d588", border_normal="#414a5b", fair=False),
+    layout.MonadTall(margin=6, border_width=2, border_focus="#009999", border_normal="#414a5b", fair=False),
     #layout.MonadWide(margin=6, border_width=2, border_focus="#0aaccf", border_normal="#414a5b"),
-    layout.Bsp (margin=5, border_width=2, border_focus="#69d588", border_normal="#414a5b", fair=False),
+    layout.Bsp (margin=5, border_width=2, border_focus="#009999", border_normal="#414a5b", fair=False),
     #layout.matrix.Matrix(columns=2, margin=2, border_width=2, border_focus="#007dcc"),
     layout.Max(margin=0, border_width=0),
     #layout.tree.TreeTab(active_bg="#0aaccf",active_fg="#1a1e25",bg_color="#1a1e25",font='comic sans ms',inactive_bg="#303643",border_width=2, border_focus="#0aaccf", border_normal="#414a5b", vspace=2,margin_left=4,margin_y=4,panel_width=200),
     #layout.MonadThreeCol(align="MonadTall_left", border_focus="#69d588", border_normal="#414a5b",main_centered=True),
 ]
+
 
 colors =  [
         ["#FFFFFF", "#FFFFFF"], # white / color 0
