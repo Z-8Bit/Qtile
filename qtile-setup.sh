@@ -2,7 +2,7 @@ sudo pacman -Syu --needed base-devel
 git clone https://aur.archlinux.org/paru-bin.git
 cd paru-bin && makepkg -si
 
-paru -S --noconfirm alacritty alsa-tools alsa-utils audacious brillo blueman bluez bluez-utils btop dbus-python discord dunst firefox-developer-edition fluent-cursor-theme-git fluent-gtk-theme-git github-desktop-bin gnome-screenshot gparted gvfs htop jdk-temurin light lightdm lightdm-gtk-greeter lxappearance maim mesa moc mpv multimc-bin neofetch nerd-fonts-jetbrains-mono network-manager-applet nitrogen noto-fonts-emoji ntfs-3g pamixer pavucontrol pipewire pipewire-alsa pipewire-pulse picom-jonaburg-git polkit-gnome powertop python-gobject polybar qtile refind rofi spotify spotify-adblock tela-icon-theme thunar touche touchegg transmission-gtk ttf-ms-fonts ttf-unifont viewnior vscodium-bin whatsapp-nativefier-dark xclip xorg yt-dlg zoom zsh 
+paru -S --noconfirm alacritty alsa-tools alsa-utils audacious-plugins-gtk3 audacious-gtk3 brillo blueman bluez bluez-utils btop dbus-python discord dunst firefox-developer-edition fluent-cursor-theme-git fluent-gtk-theme-git github-desktop-bin gnome-screenshot gparted gvfs htop jdk-temurin light lightdm lightdm-gtk-greeter lxappearance maim mesa moc mpv multimc-bin neofetch nerd-fonts-jetbrains-mono network-manager-applet nitrogen noto-fonts-emoji ntfs-3g pamixer pavucontrol pipewire pipewire-alsa pipewire-pulse picom polkit-gnome powertop python-gobject polybar qtile refind rofi spotify spotify-adblock tela-icon-theme thunar touche touchegg transmission-gtk ttf-ms-fonts ttf-unifont viewnior vscodium-bin whatsapp-nativefier-dark xclip xorg yt-dlg zoom zsh 
 
 for service in bluetooth NetworkManager touchegg.service; do
   sudo systemctl enable --now $service
