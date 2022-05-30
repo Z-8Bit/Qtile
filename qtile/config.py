@@ -46,12 +46,11 @@ keys = [
     Key([mod1], "v", lazy.spawn("vscodium")),
     Key([mod1], "d", lazy.spawn("discord")),
     Key([mod1], "s", lazy.spawn("spotify")),
-    Key([mod1], "q", lazy.spawn("transmission-gtk")),
     Key([mod1], "m", lazy.spawn("multimc")),
     #Key([mod1, "control"], "l", lazy.spawn("alacritty -e killmocp.sh")),
     #Key([mod1], "l", lazy.spawn("alacritty -e mocp -M ~/.config/moc")),
     Key([mod1], "l", lazy.spawn("audacious")),
-    Key([mod1], "t", lazy.spawn("teams-for-linux")),
+    Key([mod1], "t", lazy.spawn("transmission-gtk")),
     Key([mod1], "f", lazy.spawn("firefox-developer-edition")),
     Key([mod1], "b", lazy.spawn("blueman-manager")),
     
