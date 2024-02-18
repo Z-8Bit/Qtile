@@ -6,7 +6,7 @@ rofi_command="rofi -theme ~/.config/rofi/power.rasi"
 # Options
 picom="Picom"
 bluetooth="Bluetooth"
-desktop="ModernFamily"
+desktop="Polybar"
 update="Update"
 shutdown="Shutdown"
 reboot="Reboot"
@@ -31,7 +31,7 @@ case $chosen in
     alacritty -e paru -Syu --ignore fluent-gtk-theme-git
         ;;
     $desktop)
-    thunar Desktop/Modern\ Family\ Season\ 10/
+    killall polybar
         ;;
     $picom)
     killall picom
