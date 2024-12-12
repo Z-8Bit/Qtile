@@ -3,7 +3,6 @@ import os
 import re
 import socket
 import subprocess
-from libqtile.command import lazy
 from libqtile import qtile
 from libqtile import layout, bar, widget, hook
 from libqtile.config import Click, Drag, DropDown, Group, KeyChord, Key, Match, Screen, ScratchPad
